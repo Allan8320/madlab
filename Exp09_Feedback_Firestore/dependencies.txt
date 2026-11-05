@@ -1,0 +1,18 @@
+// ================= PART 1: PROJECT-level build.gradle.kts =================
+// Gradle Scripts → build.gradle.kts (Project: Exp9)  → inside plugins { } add:
+
+    id("com.google.gms.google-services") version "4.4.2" apply false
+
+
+// ================= PART 2: APP-level build.gradle.kts =================
+// Gradle Scripts → build.gradle.kts (Module :app)
+
+// 2a) inside plugins { } at the top, add:
+    id("com.google.gms.google-services")
+
+// 2b) inside dependencies { } add:
+    implementation(platform("com.google.firebase:firebase-bom:33.7.0"))
+    implementation("com.google.firebase:firebase-firestore")
+
+// Then click "Sync Now".
+// IMPORTANT: google-services.json must already be inside the  app/  folder before syncing.

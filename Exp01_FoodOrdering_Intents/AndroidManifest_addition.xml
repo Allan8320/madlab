@@ -1,0 +1,7 @@
+<!--
+  Paste this line INSIDE <application ...> ... </application>,
+  right AFTER the closing </activity> of MainActivity.
+-->
+<activity
+    android:name=".OrderSummaryActivity"
+    android:exported="false" />

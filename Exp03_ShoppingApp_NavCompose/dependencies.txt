@@ -1,0 +1,2 @@
+// Paste INSIDE dependencies { } of  build.gradle.kts (Module :app)  then click "Sync Now"
+    implementation("androidx.navigation:navigation-compose:2.8.4")

@@ -1,0 +1,28 @@
+// ================= PART 1: PLUGIN =================
+// In build.gradle.kts (Module :app), at the very TOP there is a  plugins { ... }  block.
+// Add this ONE line inside it (as the last line of that block):
+
+    id("kotlin-kapt")
+
+// Example – after adding, it looks like:
+// plugins {
+//     alias(libs.plugins.android.application)
+//     alias(libs.plugins.kotlin.android)
+//     alias(libs.plugins.kotlin.compose)
+//     id("kotlin-kapt")
+// }
+
+
+// ================= PART 2: DEPENDENCIES =================
+// Paste INSIDE dependencies { } of the same file, then click "Sync Now"
+
+    // Room database
+    implementation("androidx.room:room-runtime:2.6.1")
+    implementation("androidx.room:room-ktx:2.6.1")
+    kapt("androidx.room:room-compiler:2.6.1")
+
+    // DataStore (Preferences)
+    implementation("androidx.datastore:datastore-preferences:1.1.1")
+
+    // Material icons (for the Delete icon)
+    implementation("androidx.compose.material:material-icons-core")

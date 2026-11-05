@@ -1,0 +1,12 @@
+// NO new dependencies normally needed – a new "Empty Activity" project already contains these.
+// Just CHECK that build.gradle.kts (Module :app) → dependencies { } has lines like these.
+// (In new projects they are written as  libs.xxx  – that is the same thing.)
+
+    testImplementation("junit:junit:4.13.2")                                  // unit tests
+    androidTestImplementation(platform("androidx.compose:compose-bom:2024.09.00"))
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4")           // Compose UI tests
+    debugImplementation("androidx.compose.ui:ui-test-manifest")               // Compose UI tests
+    androidTestImplementation("androidx.test.ext:junit:1.2.1")
+
+// If any of them is missing, paste only the missing line(s) and click Sync Now.
+// For the compose-bom line, if one already exists (libs.androidx.compose.bom), do NOT add another.
